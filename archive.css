@@ -1,0 +1,238 @@
+/* Import Newsreader font */
+@import url('https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,200..800&display=swap');
+
+
+/* Declare the custom font Teko */
+@font-face {
+    font-family: 'Teko';
+    src: url('Teko-Regular.ttf') format('truetype');
+    font-weight: normal; /* Teko is typically used in regular weight */
+    font-style: normal;
+}
+
+
+/* Base text styles */
+body, html {
+    margin: auto;
+    background-color: #000000;
+    color: #ffffff;
+    line-height: 1.6;
+    font-family: "Newsreader", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Combined nav-menu styles */
+.nav-menu, .nav-menu-index {
+    position: fixed; /* Fixes the nav bar at the top */
+    top: 0; /* Align it at the top of the page */
+    left: 0; /* Stretch it across the entire width */
+    width: 100%; /* Full width */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 20px;
+    box-sizing: border-box; /* Include padding in the element's total width */
+    color: rgb(255, 255, 255);
+    z-index: 2; /* Keeps it above other content */
+    list-style-type: none;
+    font-size: 2rem; /* Increased font size for nav bar */
+    font-family: 'Teko', sans-serif;
+}
+
+.nav-menu {
+    color: rgb(0, 0, 0);
+}
+
+.nav-menu-index {
+    color: rgb(255, 255, 255);
+}
+
+.nav-menu a, .nav-menu-index a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* Navigation menu item styles */
+.navMenuItem {
+    transition: all 0.2s ease;
+}
+
+.navMenuItem:hover {
+    text-shadow: 
+        0 0 5px rgba(152, 152, 152, 0.9),
+        0 0 10px rgba(152, 152, 152, 0.8),
+        0 0 15px rgba(152, 152, 152, 0.7),
+        2px 0 20px rgb(152, 152, 152),
+        2px 0 30px rgb(152, 152, 152);
+}
+
+/* Terminal and content styles */
+.terminal-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 80px auto 0;
+    padding: 0 40px;
+}
+
+.terminalContainerForCenter {
+    width: 80%;
+    max-width: 1200px;
+    margin: 90px auto 0;
+    padding: 20px;
+    position: relative;
+}
+
+/* Archive list styles */
+.archive-list {
+    padding: 20px;
+    margin: auto;
+    list-style: none;
+}
+
+.archive-list li {
+    margin-bottom: 1.5rem;
+    padding-left: 30px;
+    overflow: hidden;
+    opacity: 0;
+    animation: 
+        typewriter 1s steps(40, end) forwards,
+        fadeIn 0.1s forwards;
+}
+
+.archive-list a {
+    color: #003cff;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.archive-list a:hover {
+    color: #6685ff;
+}
+
+.archive-list [data-date] {
+    color: #b3b3b3;
+}
+
+/* Heading styles */
+h2 {
+    color: #ffffff;
+    font-weight: 700;
+    font-style: normal;
+    margin: 20px 0 2rem 0;
+    white-space: wrap;
+    border-right: 2px solid #ffffff;
+    animation: 
+        typewriter 1s steps(40, end),
+        blink 0.75s step-end infinite;
+    font-family: "Newsreader", serif;
+    font-optical-sizing: auto;
+}
+
+h2::before {
+    content: '> ';
+    color: #ffffff;
+}
+
+/* Media styles */
+.article-video {
+    width: 100%;
+    max-width: 1000px;
+    margin: 2rem auto;
+    display: block;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    gap: 20%;
+    margin: 2rem auto;
+    width: 100%;
+}
+
+.inline-image {
+    width: 40%;
+    height: auto;
+    object-fit: cover;
+}
+
+
+
+/* Animation keyframes */
+@keyframes cursor-blink {
+    0%, 100% { opacity: 0; }
+    50% { opacity: 1; }
+}
+
+@keyframes typewriter {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink {
+    50% { border-color: transparent; }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes loading {
+    0% { content: "Initializing"; }
+    25% { content: "Initializing."; }
+    50% { content: "Initializing.."; }
+    75% { content: "Initializing..."; }
+}
+
+/* Terminal loader */
+.terminal-loader {
+    padding: 20px;
+    color: #00ff00;
+    margin-left: 30px;
+    margin-bottom: 2rem;
+}
+
+.terminal-loader::after {
+    content: "";
+    animation: loading 2s steps(1) infinite;
+}
+
+/* Article subtitle */
+.article-subtitle {
+    color: #a6bbff;
+    margin: auto auto auto 20px;
+    font-family: "Newsreader", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+}
+
+/* List item animation delays */
+.archive-list li:nth-child(1) { animation-delay: 0.2s; }
+.archive-list li:nth-child(2) { animation-delay: 0.4s; }
+.archive-list li:nth-child(3) { animation-delay: 0.6s; }
+.archive-list li:nth-child(4) { animation-delay: 0.8s; }
+.archive-list li:nth-child(5) { animation-delay: 1.0s; }
+.archive-list li:nth-child(6) { animation-delay: 1.2s; }
+.archive-list li:nth-child(7) { animation-delay: 1.4s; }
+.archive-list li:nth-child(8) { animation-delay: 1.6s; }
+.archive-list li:nth-child(9) { animation-delay: 1.8s; }
+.archive-list li:nth-child(10) { animation-delay: 2.0s; }
+
+
+.image50centered {
+    width: 50%; /* Set the width to 50% of the parent container */
+    display: block; /* Ensures the image behaves like a block element */
+    margin: 0 auto; /* Centers the image horizontally */
+}
+
+.width100Image {
+    width: 100%;
+}
+
+h1 {
+    font-family: 'Teko', sans-serif;
+}
+

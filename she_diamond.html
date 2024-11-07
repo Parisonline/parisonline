@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PARIS ONLINE</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+        <ul class="nav-menu">
+            <li class="navMenuItem"><a href="archive.html">Archive</a></li>
+            <li class="navMenuItem"><a href="index.html">Home</a></li>
+            <li class="navMenuItem"><a href="about.html">About</a></li>
+        </ul>
+    </nav>
+
+   <div class="backgroundArtistsPage"></div>
+
+    <div class="artist-page">
+        <div class="text-section">
+            <div class="artistHeader">
+                <!-- Below is the star header background which I have removed -->
+             <!-- <img src="https://i.imgur.com/khBVMjn.png" alt="" class="behindh1"> -->
+            <h1>She Diamond</h1>
+           </div>
+            
+        </div>
+
+
+    
+        <div class="video-section">
+            <img src="https://i.imgur.com/t4odAft.png" alt="" class="videoWrapperTest">
+            <iframe src="https://www.youtube.com/embed/tnBCk9oHZSY?si=5trjDw4uN9ANFUfl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <div class="videoDidactic">
+            <p>A film on forgiveness featuring the fitness practitioner, philosopher and proto-psychedelic <a href="https://www.instagram.com/she___diamond/">She Diamond</a>. Shot in Marseille during her performance for <a href="https://www.instagram.com/ola_radio?utm_source=ig_web_button_share_sheet">Ola Radio</a>.  
+              </p>
+
+              <p>Music <br>
+                Feel2Real by She Diamond <br>
+                <br>
+                
+                Photos by <a href="https://www.instagram.com/lenaretrash/">Léna Belhassen</a></p>
+           </div>
+
+
+
+<!-- image gallery pre - open  -->
+
+<div class="imageGalleryGroup" onclick="openGallery()">
+    <img src="https://live.staticflickr.com/65535/54110046716_02ff8b3925_n.jpg" alt="Cover (1)" />
+    <p class="overlayedTextGallery">Photo Gallery</p>
+</div>
+
+<div class="galleryOverlay" id="galleryOverlay">
+    <span class="closeBtn" onclick="closeGallery()">✖</span>
+    <div class="carousel-container">
+    
+        <!-- New first slide -->
+        <div class="carousel-slide">
+            <img src="https://live.staticflickr.com/65535/54110046716_5f7d363f3d_o.jpg" alt="Cover (1)" />
+        </div>
+        
+        <!-- Existing slides -->
+        <div class="carousel-slide">
+            <img src="https://live.staticflickr.com/65535/54110503960_dc3e0954d9_b.jpg" alt="2" />
+        </div>
+        <div class="carousel-slide">
+            <img src="https://live.staticflickr.com/65535/54110046521_db9f269e3f_b.jpg" alt="3" />
+        </div>
+        <div class="carousel-slide">
+            <img src="https://live.staticflickr.com/65535/54110503650_3d79f400ae_b.jpg" alt="4" />
+        </div>
+
+        <!-- Carousel controls -->
+        <button class="carousel-btn prev">‹</button>
+        <button class="carousel-btn next">›</button>
+    </div>
+</div>
+
+    </div>  
+
+    <script src="java.js"></script>
+</body>
+</html>

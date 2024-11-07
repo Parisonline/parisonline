@@ -1,0 +1,809 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,200..800&display=swap');
+
+/* Declare the custom font Teko */
+@font-face {
+    font-family: 'Teko';
+    src: url('Teko-Regular.ttf') format('truetype');
+    font-weight: normal; /* Teko is typically used in regular weight */
+    font-style: normal;
+}
+
+p {
+    font-size: larger;
+    line-height: 1.5; /* Adjust this value to increase/decrease spacing */
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-weight: 400;
+    color: white;
+    font-size: 18px;
+    width: 100vw; /* Ensures width doesn't exceed viewport */
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.navMenuShadow {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    z-index: 1;
+    background: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0.374) 0%,
+        rgba(255, 255, 255, 0.897) 50%,
+        rgba(255, 255, 255, 0) 90%
+    );
+    background-size: 100px 80px, 100% 100%, 4px 4px;
+    backdrop-filter: blur(1px);
+    -webkit-backdrop-filter: blur(1px);
+}
+
+/* Top Navigation Bar */
+.nav-menu {
+    position: fixed; /* Fixes the nav bar at the top */
+    top: 0; /* Align it at the top of the page */
+    left: 0; /* Stretch it across the entire width */
+    width: 100%; /* Full width */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 20px;
+    box-sizing: border-box; /* Include padding in the element's total width */
+    color: rgb(0, 0, 0);
+    z-index: 2; /* Keeps it above other content */
+    list-style-type: none;
+    font-family: 'Teko', sans-serif;
+    font-size: 2rem; /* Increased font size for nav bar */
+}
+
+/* Top Navigation Bar */
+.nav-menu-index {
+    position: fixed; /* Fixes the nav bar at the top */
+    top: 0; /* Align it at the top of the page */
+    left: 0; /* Stretch it across the entire width */
+    width: 100%; /* Full width */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 20px;
+    box-sizing: border-box; /* Include padding in the element's total width */
+    color: rgb(255, 255, 255);
+    z-index: 2; /* Keeps it above other content */
+    list-style-type: none;
+    font-size: 2rem; /* Increased font size for nav bar */
+    font-family: 'Teko', sans-serif;
+}
+
+.videoDidactic a {
+    text-shadow: 
+    /* Inner glow layers */
+    0 0 5px rgba(152, 152, 152, 0.9),
+    0 0 10px rgba(152, 152, 152, 0.8),
+    0 0 15px rgba(152, 152, 152, 0.7),
+    /* Outer glow */
+    2px 0 20px rgb(152, 152, 152),
+    /* Additional outer glow for more intensity */
+    2px 0 30px rgb(152, 152, 152);
+    transition: all 0.5s;
+}
+
+.videoDidactic a:hover {
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .videoDidactic a {
+        color: white; /* Always white on mobile */
+        text-shadow: 
+        /* Inner glow layers */
+        0 0 5px rgba(152, 152, 152, 0.9),
+        0 0 10px rgba(152, 152, 152, 0.8),
+        0 0 15px rgba(152, 152, 152, 0.7),
+        /* Outer glow */
+        2px 0 20px rgb(152, 152, 152),
+        /* Additional outer glow for more intensity */
+        2px 0 30px rgb(152, 152, 152);
+    }
+}
+
+
+.navMenuItem {
+    /* Add the transition to the base class */
+    transition: all 0.2s ease;
+}
+
+.navMenuItem:hover {
+    text-shadow: 
+    /* Inner glow layers */
+    0 0 5px rgba(152, 152, 152, 0.9),
+    0 0 10px rgba(152, 152, 152, 0.8),
+    0 0 15px rgba(152, 152, 152, 0.7),
+    /* Outer glow */
+    2px 0 20px rgb(152, 152, 152),
+    /* Additional outer glow for more intensity */
+    2px 0 30px rgb(152, 152, 152);
+}
+
+
+.bottomDidactic {
+    margin: auto;
+    margin-top: -100px;
+    text-align: center;
+    padding-bottom: 250px;
+    height: 300px;
+    z-index: -20;
+    color: black;
+    opacity: 0; /* Start fully transparent */
+    transition: opacity 1s ease-in; /* Smooth transition for opacity */
+    font-weight: 300;
+    width: 100%;
+    display: flex; /* Added to enable flexbox */
+    justify-content: center; /* Centers content horizontally */
+    align-items: center; /* Centers content vertically */
+    text-shadow: 
+    /* Inner glow layers */
+    0 0 5px rgba(152, 152, 152, 0.9),
+    0 0 10px rgba(152, 152, 152, 0.8),
+    0 0 15px rgba(152, 152, 152, 0.7),
+    /* Outer glow */
+    2px 0 20px rgb(152, 152, 152),
+    /* Additional outer glow for more intensity */
+    2px 0 30px rgb(152, 152, 152);
+    color: white; /* This line is unchanged */
+/*     background: linear-gradient(to top, rgba(128, 128, 128, 1) 0%, rgba(128, 128, 128, 0) 100%);
+ */
+}
+
+.bottomDidactic.fade-in {
+    opacity: 1; /* End fully visible */
+}
+
+.bottomDidacticTextBox {
+    width: 90%;
+    max-width: 500px;
+
+}
+
+.logoContainerForCentering{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Makes the section take up full screen height */
+}
+
+/* Paris Online Main Logo on landing page */
+#mainLogo {
+    max-width: 500px; /* Default size */
+    z-index: 10;
+    text-shadow: 5px 5px 5px rgba(255, 255, 255);
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+    #mainLogo {
+        max-width: 300px; /* Adjust size for mobile */
+    }
+}
+
+.testingScroll {
+    display: flex;
+    flex-direction: column; /* Distribute items vertically */
+    justify-content: center; /* Center items vertically in the container */
+    align-items: center; /* Center items horizontally in the container */
+    height: 100vh; /* Make the container full viewport height */
+}
+
+/* Additional Height for the Scroll system to only scroll to Thanas */
+
+.additionalHeight {
+    height: 37.5%;
+}
+
+.heightbox {
+    height: 100px; /* Adjust as needed */
+    display: flex;
+    align-items: center; /* Center text vertically within each box */
+    justify-content: center; /* Center text horizontally within each box */
+    margin: 10px 0; /* Space between the boxes */
+    font-size: x-large; /* Default font size */
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+    .heightbox {
+        font-size: large; /* Adjust font size for mobile */
+    }
+}
+
+.about-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Changed from center to allow natural flow */
+    margin-top: 100px; /* Space for nav bar */
+    padding: 40px 20px;
+    min-height: calc(100vh - 100px); /* Full height minus nav space */
+    max-width: 800px; /* Limit width for readability */
+    margin-left: auto;
+    margin-right: auto;
+    color: #1a1a1a; /* Softer than pure black */
+}
+
+
+
+/* Typography */
+/* Typography */
+h1, h2, h3 {
+    font-family: 'Teko', sans-serif; /* Updated to use Teko font */
+    line-height: 0.8;
+}
+
+
+h2 {
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 25px;
+    letter-spacing: 0.5px;
+}
+
+h3 {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+
+/* Partner sections */
+.partner {
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+}
+
+.partner:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+/* Links styling */
+.about-container a {
+    color: #1a1a1a;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    transition: border-color 0.3s ease;
+}
+
+.about-container a:hover {
+    border-bottom-color: #1a1a1a;
+}
+
+/* Contact info section */
+.contact-info {
+    background-color: #f8f8f86f;
+    padding: 20px;
+    border-radius: 4px;
+    margin-top: 20px;
+}
+
+/* Footer styling */
+.about-footer {
+    margin-top: 40px;
+    padding-top: 20px;
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .about-container {
+        margin-top: 80px;
+        padding: 20px;
+    }
+
+    .about-section, 
+    .creative-partners, 
+    .current-volume {
+        padding: 25px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+
+
+}
+
+.backgroundGif {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: auto;
+    min-height: 101%;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    transform: translate(-50%, -50%);
+    z-index: -2;
+}
+
+.titleTerminal{
+
+    font-weight: bold;
+    font-size: large;
+    text-decoration: underline;
+}
+
+/* Media query for ultrawide screens */
+@media screen and (min-aspect-ratio: 1.8/1) {
+    .backgroundGif {
+        min-width: 100%;
+        height: auto;
+        min-height: unset; /* Remove min-height to avoid conflict */
+    }
+}
+
+.testopacityscroll {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: auto;
+    min-height: 101%;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+/* Apply to nav menu */
+.nav-menu, .nav-menu-about a {
+    font-size: 1.54rem; /* Adjust size as needed */
+}
+
+
+/* Specific size adjustments for different header levels */
+h1 {
+    font-size: 4rem; /* Increased header size */
+    letter-spacing: 0.02em;
+}
+
+h2 {
+    font-size: 3rem; /* Increased header size */
+    letter-spacing: 0.02em;
+}
+
+h3 {
+    font-size: 2.5rem; /* Increased header size */
+    letter-spacing: 0.02em;
+}
+
+/* Specific weights for different elements */
+.newsreader-title {
+    font-family: "Newsreader", serif;
+    font-weight: 700; /* Bold for titles */
+}
+
+.newsreader-subtitle {
+    font-family: "Newsreader", serif;
+    font-weight: 300; /* Light for subtitles */
+}
+
+/* Setting img as background for artists page */
+
+.backgroundArtistsPage {
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    min-height: 100vh;
+    z-index: -5;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-image: url('https://i.imgur.com/86BXmpu.png'); /* Specify your image */
+    background-size: cover; /* Ensures full coverage without stretching */
+    background-position: center; /* Centers the image horizontally and vertically */
+    background-repeat: no-repeat; /* Prevents tiling of the background */
+    background-attachment: fixed; /* Keeps the image fixed in place during scrolling */
+}
+
+@media (max-width: 768px) {
+    .backgroundArtistsPage {
+        height: 115vh; /* Sets the height slightly larger than the viewport */
+    }
+}
+
+.artist-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    text-align: center;
+    margin-top: 40px;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.video-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 2rem 0;
+    position: relative;  /* Add this for positioning context */
+}
+
+.videoWrapperTest {
+    position: absolute;  /* Position above the video */
+    max-width: 1000px;
+    width: 100%;
+    z-index: 1;  /* Place above the video */
+    pointer-events: none;  /* Prevents mouse interaction */
+    opacity: 20%;
+    min-width: 800px;
+}
+
+.videoDidactic {
+    width: 90%;
+    max-width: 560px;
+    font-weight: 300;
+    font-family: "Newsreader", serif;
+}
+
+.youtubeVideoArtists {
+    position: relative;  /* Keeps video in document flow */
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.artistHeader {
+    position: relative;  /* Establishes a positioning context */
+    display: inline-block;  /* Ensures the image and text are aligned */
+    margin-top: 50px;
+}
+
+.behindh1 {
+    position: absolute;  /* Positions the image absolutely within the header */
+    top: 60%;  /* Adjusts vertical position */
+    left: 50%;  /* Adjusts horizontal position */
+    transform: translate(-50%, -50%);  /* Centers the image */
+    width: 500px;  /* Adjust size as needed */
+    height: auto;  /* Maintains aspect ratio */
+    z-index: -1;  /* Places the image behind the text */
+    opacity: 70%;
+}
+
+/* Articles page styling */
+.articles-container {
+    width: 80%;
+    max-width: 800px;
+    color: black;
+    margin-top: -50px;
+}
+
+.featured-articles, .collaborator-articles {
+    margin-bottom: 1rem;
+}
+
+.articles-container ul {
+    list-style: none;
+    padding: 0;
+}
+
+.articles-container li {
+    transition: all 0.2s ease;
+    font-family: 'Teko', sans-serif;
+}
+
+.articles-container a {
+    
+    color: black;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: all 0.2s ease;
+}
+
+.articles-container a:hover {
+    text-shadow: 
+        /* Inner glow layers */
+        0 0 10px rgba(203, 203, 203, 0.9),
+        /* Outer glow */
+        0 0 5px rgb(232, 232, 232);
+}
+
+
+
+.archive-list {
+    list-style: none;  /* Removes the bullets */
+    padding: 0;  /* Removes default padding */
+    margin: 0;
+}
+
+.article-subtitle {
+    display: block;
+    margin-left: 1rem;
+    color: #000000;
+    font-size: 0.9em;
+}
+
+.heightbox h2 {
+    font-family: 'Teko', sans-serif; /* Keep the existing font family */
+    font-size: 3em; /* Set font size to 3em */
+    letter-spacing: 0.02em; /* Keep existing letter spacing */
+}
+
+
+.heightbox a {
+  
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* stylisations for the gallery on the page ::: before opening the overlayed gallery */
+
+/* Image Gallery Group */
+.imageGalleryGroup {
+    position: relative;
+    width: 350px; /* Ensure both galleries have the same width */
+    margin: 40px auto;
+    cursor: pointer;
+}
+
+.imageGalleryGroup img {
+    width: 100%; /* Make the image take the full width of the container */
+    height: auto; /* Maintain aspect ratio */
+    filter: blur(3px);
+    transition: filter 0.5s ease;
+}
+
+.imageGalleryGroup img:hover {
+    filter: blur(1px);
+}
+
+.imageGalleryGroup p {
+    font-family: 'Teko', sans-serif;
+    color: white;
+}
+
+.overlayedTextGallery {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+    text-shadow: 
+    /* Inner glow layers */
+    0 0 5px rgba(152, 152, 152, 0.9),
+    0 0 10px rgba(152, 152, 152, 0.8),
+    0 0 15px rgba(152, 152, 152, 0.7),
+    /* Outer glow */
+    2px 0 20px rgb(152, 152, 152),
+    /* Additional outer glow for more intensity */
+    2px 0 30px rgb(152, 152, 152);
+}
+
+/* Fullscreen Gallery Overlay */
+.galleryOverlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.427);
+    backdrop-filter: blur(11px);
+    z-index: 1000;
+}
+
+.carousel-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-slide.active {
+    opacity: 1;
+}
+
+.carousel-slide img {
+    max-width: 90%;
+    max-height: 90vh;
+    object-fit: contain;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: rgb(0, 0, 0);
+    font-size: 3rem;
+    cursor: pointer;
+    padding: 20px;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+    z-index: 1001;
+}
+
+.carousel-btn:hover {
+    opacity: 1;
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+
+.closeBtn {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 2rem;
+    color: #000000;
+    cursor: pointer;
+    z-index: 1002;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+}
+
+.closeBtn:hover {
+    opacity: 1;
+}
+
+#tovaAndJulia {
+    width: 100%;
+    max-width: 600px;
+}
+
+/* Apply Impact font to the She Diamond header */
+.artistHeader h1 {
+    font-family: 'Teko', sans-serif; /* Keep the existing font family */
+    font-size: 3rem; /* Adjust size as needed */
+        font-weight: 500;
+    color: white;
+    text-shadow: 
+    /* Inner glow layers */
+    0 0 5px rgba(152, 152, 152, 0.9),
+    0 0 10px rgba(152, 152, 152, 0.8),
+    0 0 15px rgba(152, 152, 152, 0.7),
+    /* Outer glow */
+    2px 0 20px rgb(152, 152, 152),
+    /* Additional outer glow for more intensity */
+    2px 0 30px rgb(152, 152, 152);
+
+}
+
+.about-container h2 {
+    font-family: 'Teko', sans-serif; /* Keep the existing font family */
+    font-size: 3rem; /* Adjust size as needed */
+        font-weight: 500;
+    color: white;
+    text-shadow: 
+    /* Inner glow layers */
+    0 0 5px rgba(152, 152, 152, 0.9),
+    0 0 10px rgba(152, 152, 152, 0.8),
+    0 0 15px rgba(152, 152, 152, 0.7),
+    /* Outer glow */
+    2px 0 20px rgb(152, 152, 152),
+    /* Additional outer glow for more intensity */
+    2px 0 30px rgb(152, 152, 152);
+}
+
+/* Top Navigation Bar */
+.nav-menu, .nav-menu-index {
+    font-family: 'Teko', sans-serif; /* Keep the existing font family */
+    font-size: 2rem; /* Increased font size for nav bar */
+    font-weight: 200;
+    color: white;
+    text-shadow: 
+    /* Inner glow layers */
+    0 0 5px rgba(152, 152, 152, 0.9),
+    0 0 10px rgba(152, 152, 152, 0.8),
+    0 0 15px rgba(152, 152, 152, 0.7),
+    /* Outer glow */
+    2px 0 20px rgb(152, 152, 152),
+    /* Additional outer glow for more intensity */
+    2px 0 30px rgb(152, 152, 152);
+
+}
+
+
+
+
+
+
+.video-section iframe {
+    width: 560px; /* Set width for desktop */
+    height: 315px; /* Set height for desktop */
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+    .video-section {
+        width: 100%; /* Set width to 100% for mobile */
+        padding: 0; /* Remove any padding if necessary */
+    }
+
+    .videoWrapperTest {
+        width: 100%; /* Make the video wrapper take full width */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .video-section iframe {
+        width: 100%; /* Make iframe full width on mobile */
+        height: 300px; /* Maintain aspect ratio */
+    }
+
+    body, html {
+       
+        width: 100vw; /* Ensures width doesn't exceed viewport */
+    }
+}
+
+
+/* Subtext on the home page  */
+#homeSubtextMainPage {
+    width: 100%;
+    height: 150px;
+    align-content: center;
+    margin-bottom: -00px;
+    text-align: center;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgb(160, 160, 160) 50%, rgba(255, 255, 255, 0) 100%);
+    transition: opacity 0.5s ease; /* Just opacity for simplicity */
+    opacity: 0;  /* Default opacity */
+}
+
+
+/* extra spacing to seperate tho artists and the didactic text  */
+
+#extraspacinghome {
+    height: 15vh;
+}
+
+#homeSubtextMainPage h2 {
+    text-shadow: 
+    /* Inner glow layers */
+    0 0 5px rgba(152, 152, 152, 0.9),
+    0 0 10px rgba(152, 152, 152, 0.8),
+    0 0 15px rgba(152, 152, 152, 0.7),
+    /* Outer glow */
+    2px 0 20px rgb(152, 152, 152),
+    /* Additional outer glow for more intensity */
+    2px 0 30px rgb(152, 152, 152);
+    font-size: 2em;
+}
+
+
+

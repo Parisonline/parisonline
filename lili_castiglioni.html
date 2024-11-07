@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PARIS ONLINE</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <ul class="nav-menu">
+            <li class="navMenuItem"><a href="archive.html">Archive</a></li>
+            <li class="navMenuItem"><a href="index.html">Home</a></li>
+            <li class="navMenuItem"><a href="about.html">About</a></li>
+        </ul>
+    </nav>
+   <div class="backgroundArtistsPage"></div>
+    <div class="artist-page">
+        <div class="text-section">
+            <div class="artistHeader">
+            <h1>Lili Castiglioni</h1>
+           </div>
+        </div>
+   
+        <div class="video-section">
+            <img src="https://i.imgur.com/t4odAft.png" alt="" class="videoWrapperTest">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/ZWsqWhUhaSk?si=QoTd38yK4iY8pO4p" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <div class="videoDidactic">
+            <!-- <p><em>Lili Castiglioni</em></p> -->
+            <p>A film on the multiverse of the French musician <a href="https://www.instagram.com/lili.castiglioni/">Lili Castiglioni.</a> In between the tombs of Pere-lachaise she goes looking for her bizzaroïd melodies to come. Shot in Paris in spring 2024.</p>
+
+            <p>Music<br>
+                Alabaster by Lili Castiglioni (coprod. Vilhelm) <br>
+                La reine du palais des courants d'air by Lili Castiglioni (coprod. abel31) <br><br>
+                
+                Styling by <a href="https://www.instagram.com/axvonsandy?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">Axel von Sandager</a> <br>
+                
+                Photos by <a href="https://www.instagram.com/lenaretrash/">Léna Belhassen</a>
+               
+                </p>
+      
+        </div>
+
+
+<!-- IMAGE GALLERY  -->
+
+
+
+<div class="imageGalleryGroup" onclick="openGallery()">
+    <img src="https://live.staticflickr.com/65535/54110359914_15e406f851_b.jpg" alt="Cover" />
+    <p class="overlayedTextGallery">Photo Gallery</p>
+</div>
+
+<div class="galleryOverlay" id="galleryOverlay">
+    <span class="closeBtn" onclick="closeGallery()">✖</span>
+    <div class="carousel-container">
+        <!-- New first slide -->
+        <div class="carousel-slide">
+            <img src="https://live.staticflickr.com/65535/54110359914_15e406f851_b.jpg" alt="Cover" />
+        </div>
+        <!-- Existing slides -->
+        <div class="carousel-slide">
+            <img src="https://live.staticflickr.com/65535/54109151122_f7db644130_h.jpg" alt="Photo 1"/>
+        </div>
+        <div class="carousel-slide">
+            <img src="https://live.staticflickr.com/65535/54110476425_25055c410f_b.jpg" alt="Photo 2"/>
+        </div>
+        <div class="carousel-slide">
+            <img src="https://live.staticflickr.com/65535/54110014591_b0da0a0249_b.jpg" alt="Photo 3"/>
+        </div>
+        <!-- Carousel controls -->
+        <button class="carousel-btn prev">‹</button>
+        <button class="carousel-btn next">›</button>
+    </div>
+</div>
+
+
+
+    </div>
+    <script src="java.js"></script>
+</body>
+</html>
